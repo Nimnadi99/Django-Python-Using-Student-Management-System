@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+.form-row.fileds-row {
+    width: 111%;
+}
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: 12px;
+    color: #0056b3;
+    margin-bottom: -7px;
+    font-weight: 700;
+}
+
+label.required::before {
+    content: '*';
+    color: red;
+    margin-right: 4px;
+}
+input[type="text"], input[type="email"], input[type="number"] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #0056b3;
+    outline: none;
+    background-color: transparent;
+    margin-top: -10px;
+    font-size: 12px;
+
+}
+.head-system {
+    font-size: 21px;
+    padding: 5px;
+    margin-bottom: -19px;
+    margin-top: -30px;
+    font-weight: 500;
+    color: #0056b3;
+}
+h1.head-form-title, h1.display-4.head-system{
+    font-size: 27px;
+    padding: 5px;
+    margin-bottom: -19px;
+    font-weight: 500;
+    color: #0056b3;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+.jumbotron.sub-container {
+    width: 100%;
+    margin: auto;
+    height: 80vh;
+    overflow-y: auto;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+button.btn.btn-primary.form-submit-button, button.btn.btn-primary.back-to-list {
+    margin-top: 5%;
+    width: 30%;
+    border-radius: 10px;
+    font-size: 13px;
+    align-items: center;
+    outline: none;
+    background-color: #0056b3;
+}
+p.validated-form-message {
+    font-size: 12px;
+    margin-bottom: 22px;
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+    display: block;
+    margin-top: -28px;
+}
+table.table.table-borderless.student-list-table {
+    margin-top: 7%;
+    font-size: 11px;
+}
+thead.border-bottom.font-weigth-bold.table-head{
+    background: #0056b3;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+a.btn.text-secondary.px-0.-details-edit-icon {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+a{
+    outline: none;
+    border: none;
+    text-decoration: none;
+} 
+a.navigate-form-btn {
+    font-size: 11px;
+    font-weight: 700;
+    background: white;
+    color: #0056b3;
+    border: none;
+    padding: 4px 18px;
+    margin-top: -2px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+i.far.fa-trash-alt.fa-md.text-danger.float-right.delete-icon-student {
+    margin-top: -5px;
+}
+.register-form-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 14px;
+    margin-top:2%;
+}
+.container.mt-5.student-form-div {
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    height: 500PX;
+    flex-direction: row;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    margin-left: 53%;
+    margin-top: 2%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.form-header-set {
+    margin-bottom: 19px;
+    margin-left: -1%;
+}
+form.needs-validation.add-student-form{
+    width: 100%;
+    overflow: hidden;
+    height: 460px;
+}
+.form-group.one-set-filed {
+    width: 80%;
+}
+a.btn.text-secondary.px-0.-details-view-icon {
+    margin-top: -3px;
+    margin-right: 11px;
+}
+.black {
+    background-color: rgb(60 50 50 / 60%);
+    width: 100%;
+    height: 196vh;
+    position: absolute;
+    margin-top: -3%;
+}

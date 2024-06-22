@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="background-image: url('https://www.innova.com.tr/medias/fa612593-953b-4d0a-8c24-442e6d617e7f.fa612593-953b-4d0a-8c24-442e6d617e7f'); background-size: cover; background-position: top; margin-top: 35px; background-color: rgba(0, 0, 0, 0.5);">
+  <div class="black"></div>
+  <div class="container mt-5 student-form-div">
+    <form
+      action=""
+      method="post"
+      autocomplete="off"
+      class="needs-validation add-student-form"
+      novalidate
+      id="studentForm"
+    >
+      {% csrf_token %}
+      <div class="form-header-set">
+      <h1 class="head-form-title">Student Form</h1>
+      <hr>
+      </div>
+      <p class="validated-form-message"></p>
+      <div class="form-row fileds-row">
+        <div class="col-md-6">
+          <div class="form-group one-set-filed">
+            {{ form.Name.label_tag }}
+            {% if form.Name.field.required %}
+              <label class="required" for="{{ form.Name.id_for_label }}"></label>
+            {% endif %}
+            {{ form.Name }}
+            <div class="invalid-feedback">
+              {% if form.Name.errors %}{{ form.Name.errors.0 }}{% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group one-set-filed">
+            {{ form.Email.label_tag }}
+            {% if form.Email.field.required %}
+              <label class="required" for="{{ form.Email.id_for_label }}"></label>
+            {% endif %}
+            {{ form.Email }}
+            <div class="invalid-feedback">
+              {% if form.Email.errors %}{{ form.Email.errors.0 }}{% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-row fileds-row">
+        <div class="col-md-6">
+          <div class="form-group one-set-filed">
+            {{ form.Course.label_tag }}
+            {% if form.Course.field.required %}
+              <label class="required" for="{{ form.Course.id_for_label }}"></label>
+            {% endif %}
+            {{ form.Course }}
+            <div class="invalid-feedback">
+              {% if form.Course.errors %}{{ form.Course.errors.0 }}{% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group one-set-filed">
+            {{ form.Age.label_tag }}
+            {% if form.Age.field.required %}
+              <label class="required" for="{{ form.Age.id_for_label }}"></label>
+            {% endif %}
+            {{ form.Age }}
+            <div class="invalid-feedback">
+              {% if form.Age.errors %}{{ form.Age.errors.0 }}{% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-row fileds-row">
+        <div class="col-md-6">
+          <div class="form-group one-set-filed">
+            {{ form.Address.label_tag }}
+            {% if form.Address.field.required %}
+              <label class="required" for="{{ form.Address.id_for_label }}"></label>
+            {% endif %}
+            {{ form.Address }}
+            <div class="invalid-feedback">
+              {% if form.Address.errors %}{{ form.Address.errors.0 }}{% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group one-set-filed">
+            {{ form.Phone.label_tag }}
+            {% if form.Phone.field.required %}
+              <label class="required" for="{{ form.Phone.id_for_label }}"></label>
+            {% endif %}
+            {{ form.Phone }}
+            <div class="invalid-feedback">
+              {% if form.Phone.errors %}{{ form.Phone.errors.0 }}{% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group one-set-filed">
+        {{ form.NIC.label_tag }}
+        {% if form.NIC.field.required %}
+          <label class="required" for="{{ form.NIC.id_for_label }}"></label>
+        {% endif %}
+        {{ form.NIC }}
+        <div class="invalid-feedback">
+          {% if form.NIC.errors %}{{ form.NIC.errors.0 }}{% endif %}
+        </div>
+      </div>
+      <div class="register-form-btn">
+        <button
+          type="button"
+          class="btn btn-primary form-submit-button"
+          onclick="validateForm()"
+        >
+          <i class="fa fa-database" aria-hidden="true"></i> Submit
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary back-to-list"
+          onclick="window.location.href = '{% url 'student_list' %}'">
+          <i class="fa fa-address-book-o" aria-hidden="true"></i> Back to List
+        </button>
+      </div>
+    </form>
+  </div>
+     <!-- js and bootstrap libraries -->  
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      <!--js form validation -->
+      function validateForm() {
+        var name = document.getElementById("id_Name").value;
+        var email = document.getElementById("id_Email").value;
+        var course = document.getElementById("id_Course").value;
+        var age = document.getElementById("id_Age").value;
+        var address = document.getElementById("id_Address").value;
+        var phone = document.getElementById("id_Phone").value;
+        var nic = document.getElementById("id_NIC").value;
+
+        var message = document.querySelector(".validated-form-message");
+    
+        if (name === "" || email === "" || course === "" || age === "" || address === "" || phone === "" || nic === "") {
+          event.preventDefault();
+          message.innerText = "Please fill in all fields.";
+          message.style.color = "red";
+        } else {
+          // Submit the form
+          document.getElementById("studentForm").submit();
+  
+          // Display success message
+          message.innerText = "Successfully done.";
+          message.style.color = "green";
+  
+          // Navigate to student list after 2 seconds
+          setTimeout(function() {
+            window.location.href = '{% url 'student_list' %}';
+          }, 2000);
+        }
+      }
+  </script>
+  </body>
+</html>
