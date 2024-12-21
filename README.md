@@ -45,19 +45,19 @@ This project is a Student Management System developed using Python and the Djang
 
 <div style="display: flex; justify-content: space-between; gap: 10px;">
   <div>
-    <img src="https://github.com/YourUsername/Student-Management-System/blob/main/screenshots/screenshot1.png" alt="Screenshot 1" width="400">
-    <p>*Student Profile Creation*</p>
+    <img src="https://github.com/Nimnadi99/Django-Python-Using-Student-Management-System/blob/main/1.PNG" alt="Screenshot" width="600">
+  </div>
+  <div>
+    <img src="https://github.com/Nimnadi99/Django-Python-Using-Student-Management-System/blob/main/2.PNG" alt="Screenshot" width="600">
+  </div>
+  <div>
+    <img src="https://github.com/Nimnadi99/Django-Python-Using-Student-Management-System/blob/main/3.PNG" alt="Screenshot" width="600">
+  </div>
+  <div>
+    <img src="https://github.com/Nimnadi99/Django-Python-Using-Student-Management-System/blob/main/4.PNG" alt="Screenshot" width="600">
   </div>
 
-  <div>
-    <img src="https://github.com/YourUsername/Student-Management-System/blob/main/screenshots/screenshot2.png" alt="Screenshot 2" width="400">
-    <p>*Profile List View*</p>
-  </div>
 
-  <div>
-    <img src="https://github.com/YourUsername/Student-Management-System/blob/main/screenshots/screenshot3.png" alt="Screenshot 3" width="400">
-    <p>*Profile Details*</p>
-  </div>
 </div>
 <br/>
 <h3>🙏 Acknowledgments<br/></h3>
